@@ -67,14 +67,7 @@ def playlist():
         linked = Playlist(destination)
         linked.download_all(folder)
         print('Downloaded your videos too',folder)
-        your_choice = input('Do you want to zip this folder: ')
-        if your_choice == 'yes' or your_choice == 'Yes':
-            compress()
-        elif your_choice == 'no' or your_choice == 'No':
-            main()
-        else:
-            print('You typed wrong sending you back to main menu')
-            main()
+        main()
     except:
         print('We have managed to download some videos or maybe non at all but have encountered an error try a different playlist')
         main()
